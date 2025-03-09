@@ -1,7 +1,6 @@
+import PackageWrap from "@/components/Package/packagewrap";
 const tour = () => {
-
-    return <>12</>
-
+    return <><PackageWrap /></>
 }
 
 
