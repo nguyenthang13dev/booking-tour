@@ -1,28 +1,52 @@
 "use client";
 
 import Link from "next/link";
-
+import { useEffect, useState } from "react";
+import "./header.css"
+import Image from "next/image";
+import { FaEnvelope, FaMapMarker, FaPhone } from "react-icons/fa";
+import { RiArrowDropDownLine } from "react-icons/ri";
 const Header = () => {
+
+  const [isScroll,setIsScroll] = useState<boolean>(false);
+
+  const handleScrool = () => {
+    if(window.scrollY  > 80) {
+      setIsScroll(true)
+    } else {
+      setIsScroll(false)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrool);
+    return () => {
+      window.removeEventListener("scroll", handleScrool);
+    }
+  }, []);
+
   return (
-    <header className="site-header header-primary">
-      <div className="top-header">
-        <div className="container">
+    <header className={`site-header header-primary ${isScroll ? "fixed-header" : ""}`}>
+      <div className={`top-header ${isScroll ? "hidden" : ""}`}>
+      <div className="container">
           <div className="row">
             <div className="col-lg-8 d-none d-lg-block">
               <div className="header-contact-info">
                 <ul>
                   <li>
                     <Link href="#">
-                      <i className="fas fa-phone-alt"></i> 0888822368
+                      <FaPhone />
+                      0888822368
                     </Link>
                   </li>
                   <li>
                     <Link href="mailto:bookingtour@gmail.com">
-                      <i className="fas fa-envelope"></i> bookingtourvn@gmail.vn
+                    <FaEnvelope />
+                    bookingtourvn@gmail.vn
                     </Link>
                   </li>
                   <li>
-                    <i className="fas fa-map-marker-alt"></i> 173 Thái Hà, Đống Đa, Hà Nội
+                  <FaMapMarker />
+                  173 Thái Hà, Đống Đa, Hà Nội
                   </li>
                 </ul>
               </div>
@@ -51,18 +75,11 @@ const Header = () => {
           <div className="site-identity">
             <h1 className="site-title">
               <Link href="/">
-                <img
+                <Image
                   className="white-logo"
-                  src={"/assets/images/logo_bookingtour.vn"}
+                  src={"/images/logo_bookingtour.png"}
                   alt="logo"
-                  width={150}
-                  height={50}
-                />
-                <img
-                  className="black-logo"
-                  src="https://bookingtour.vn/templates/themes/images/bookingtour-logo.png?v1"
-                  alt="logo"
-                  width={150}
+                  width={150}   
                   height={50}
                 />
               </Link>
@@ -78,7 +95,9 @@ const Header = () => {
                   <Link href="/tour">Tour</Link>
                 </li>
                 <li className="menu-item-has-children">
-                  <Link href="/destination/trung-quoc">Tour Trung Quốc</Link>
+                  <Link href="/destination/trung-quoc">Tour Trung Quốc
+
+                  </Link>
                   <ul>
                     <li>
                       <Link href="/destination">Bắc Kinh</Link>
@@ -98,7 +117,10 @@ const Header = () => {
                   <Link href="/visa">VISA</Link>
                 </li>
                 <li className="menu-item-has-children">
-                  <Link href="/blog">Blog</Link>
+                  <Link href="/blog">Blog
+                  
+                  
+                  </Link>
                 </li>
               </ul>
             </nav>

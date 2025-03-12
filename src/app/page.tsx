@@ -17,9 +17,7 @@ export default function Home() {
       <DestinationSection /> 
       <PackageSection />
       <BestGallerySection />
-
       <ClientSection />
-
       <BlogSection /> 
     </div>
     

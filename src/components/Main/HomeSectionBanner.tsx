@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-
+import "./main.css"
 
 const HomeSlider = () => {
   return (
@@ -33,8 +33,9 @@ const HomeSlider = () => {
                   </a>
                 </div>
               </div>
+        <div className="overlay"></div>
+
             </div>
-            <div className="overlay"></div>
           </div>
         </SwiperSlide>
 
@@ -60,10 +61,14 @@ const HomeSlider = () => {
                 </div>
               </div>
             </div>
-            <div className="overlay"></div>
+
+      <div className="overlay"></div>
+
           </div>
         </SwiperSlide>
       </Swiper>
+
+
     </section>
   );
 };
