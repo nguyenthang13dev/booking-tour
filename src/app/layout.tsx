@@ -36,9 +36,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${raleway}  antialiased`}
-      >
+    <body className={`${raleway.variable} antialiased`}>
+
 <div>
     <Header />
       </div>

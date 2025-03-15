@@ -33,9 +33,10 @@ const HomeSlider = () => {
                   </a>
                 </div>
               </div>
-        <div className="overlay"></div>
 
             </div>
+            <div className="overlay"></div>
+
           </div>
         </SwiperSlide>
 
@@ -62,7 +63,7 @@ const HomeSlider = () => {
               </div>
             </div>
 
-      <div className="overlay"></div>
+            <div className="overlay"></div>
 
           </div>
         </SwiperSlide>

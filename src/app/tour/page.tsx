@@ -5,22 +5,16 @@ const tour = () => {
     return <>
     <HomeSlider />
     <div className="container">
-    
         <Row gutter={[25, 25]}>
             <PackageWrap />
             <PackageWrap />
             <PackageWrap />
         </Row>
-
-
         <Row gutter={[25, 25]}>
             <PackageWrap />
             <PackageWrap />
             <PackageWrap />
         </Row>
-
-
-
         <Row gutter={[25, 25]}>
             <PackageWrap />
             <PackageWrap />
