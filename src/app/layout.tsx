@@ -10,10 +10,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
-import "./globals.css";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import { Providers } from "@/store/providers";
 
+import "./globals.css";
 
 const raleway = Raleway({
   weight: ['300', '600', '900'],
@@ -36,14 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <body className={`${raleway.variable} antialiased`}>
-
-<div>
-    <Header />
-      </div>
-        {children}
-    <Footer />
-
+      <body className={`${raleway.variable} antialiased`}>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
