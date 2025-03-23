@@ -12,7 +12,7 @@ const PackageWrap = () => {
    <div className="package-wrap">
      {/* Hình ảnh */}
      <figure className="feature-image">
-       <Link href="https://bookingtour.vn/tour/chuyen-du-lich-bac-ninh-singapore-4-ngay-3-dem.html">
+       <Link href="/tour/123">
          <Image
            src="/images/chuyen-du-lich-bac-ninh-singapore-4-ngay-3-dem5.jpg"
            alt="Chuyến Du Lịch Bắc Ninh - Singapore"
