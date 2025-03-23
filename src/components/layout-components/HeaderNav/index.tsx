@@ -66,18 +66,7 @@ export const HeaderNav = () => {
                             </NavItem>
                         )}
                     </NavEdge>
-                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                        <p style={{
-                            color: "white",
-                            margin: 0,
-                            textTransform: "uppercase",
-                            lineHeight: 1.4,
-                            fontSize: 18,
-                            fontWeight: "bold"
-                        }}>
-                            phần mềm giám sát hoạt động thương mại điện tử
-                        </p>
-                    </div>
+
                     <NavEdge right>
 
 
