@@ -51,15 +51,15 @@ export const Logo: React.FC<LogoProps> = ({ mobileLogo, logoType }) => {
   const getLogo = (): string => {
     if (logoType === 'light') {
       if (navCollapsed) {
-        return '/img/image1329quoc-huy-viet-nam.png';
+        return '/images/bookingtour-logo.png';
       }
-      return '/img/image1329quoc-huy-viet-nam.png';
+      return '/images/bookingtour-logo.png';
     }
 
     if (navCollapsed) {
-      return '/img/logo-sm.png';
+      return '/images/bookingtour-logo.png';
     }
-    return '/img/logo.png';
+    return '/images/bookingtour-logo.png';
   };
 
   return (

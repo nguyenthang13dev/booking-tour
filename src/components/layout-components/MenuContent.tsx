@@ -143,14 +143,84 @@ type SideNavContentProps = {
   hideGroupTitle?: boolean
 }
 
+const mockMenuData: MenuDataType[] = [
+  {
+    id: '1',
+    name: 'Dashboard',
+    url: '/dashboard',
+    icon: '/images/icons/computer.png',
+    isAccess: true,
+    listMenu: []
+  },
+  {
+    id: '2',
+    name: 'Tour Management',
+    icon: '/images/icons/computer.png',
+    isAccess: true,
+    listMenu: [
+      {
+        id: '2-1',
+        name: 'Tours List',
+        url: '/tours',
+        isAccess: true,
+        listMenu: []
+      },
+      {
+        id: '2-2',
+        name: 'Categories',
+        url: '/categories',
+        isAccess: true,
+        listMenu: []
+      }
+    ]
+  },
+  {
+    id: '3',
+    name: 'Amenities',
+    url: '/AmenityManagement',
+    icon: '/images/icons/computer.png',
+    isAccess: true,
+    listMenu: []
+  },
+  {
+    id: '4',
+    name: 'Bookings',
+    icon: '/images/icons/computer.png',
+    isAccess: true,
+    listMenu: [
+      {
+        id: '4-1',
+        name: 'All Bookings',
+        url: '/bookings',
+        isAccess: true,
+        listMenu: []
+      },
+      {
+        id: '4-2',
+        name: 'Pending',
+        url: '/bookings/pending',
+        isAccess: true,
+        listMenu: []
+      }
+    ]
+  },
+  {
+    id: '5',
+    name: 'Settings',
+    url: '/settings',
+    icon: '/images/icons/computer.png',
+    isAccess: true,
+    listMenu: []
+  }
+];
+
 const SideNavContent: React.FC<SideNavContentProps> = ({
   routeInfo,
   hideGroupTitle,
 }) => {
-  const menuData: MenuDataType[] | null = useSelector(
-    (state) => state.menu.menuData
-  )
-  const navCollapsed = useSelector((state) => state.customizer.isCollapse)
+  // Replace menuData selector with mock data
+  const menuData = mockMenuData;
+  const navCollapsed = useSelector((state) => state.customizer.isCollapse);
 
   const menuItems = useMemo(
     () => getSideNavMenuItem(menuData || [], false, navCollapsed),
